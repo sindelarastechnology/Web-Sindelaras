@@ -36,12 +36,12 @@ class SliderResource extends Resource
                     Forms\Components\FileUpload::make('image')
                         ->label('Gambar Background (Desktop)')
                         ->image()->imageEditor()
-                        ->imageResizeMode('cover')->imageResizeTargetWidth(1920)->maxSize(2048)
+                        ->imageResizeMode('cover')->imageResizeTargetWidth(1920)->maxSize(20000)
                         ->directory('sliders')->nullable()->columnSpanFull(),
                     Forms\Components\FileUpload::make('mobile_image')
                         ->label('Gambar Background (Mobile)')
                         ->image()->imageEditor()
-                        ->imageResizeMode('cover')->imageResizeTargetWidth(1080)->maxSize(2048)
+                        ->imageResizeMode('cover')->imageResizeTargetWidth(1080)->maxSize(20000)
                         ->directory('sliders')->columnSpanFull(),
                     Forms\Components\ColorPicker::make('text_color')
                         ->label('Warna Teks')->default('#ffffff'),

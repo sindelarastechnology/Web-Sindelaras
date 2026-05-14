@@ -78,10 +78,14 @@ class ServicePackageResource extends Resource
                         ->schema([
                             Forms\Components\TextInput::make('feature')
                                 ->label('Fitur')
-                                ->required(),
+                                ->required()
+                                ->extraInputAttributes(fn ($get) => [
+                                    'style' => $get('icon') === '❌' ? 'text-decoration: line-through;' : '',
+                                ]),
                             Forms\Components\Select::make('icon')
                                 ->label('Icon')
                                 ->options([
+                                    '❌' => '❌ Tidak Ada',
                                     '✅' => '✅ Centang',
                                     '⭐' => '⭐ Star',
                                     '🎨' => '🎨 Desain',

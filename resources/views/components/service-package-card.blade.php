@@ -36,9 +36,10 @@ $whatsappMsg = 'Halo, saya tertarik dengan Paket ' . $package->name . ' untuk la
 
     <ul class="space-y-3 mb-8 flex-1">
         @foreach($package->features ?? [] as $feature)
+            @php $isCross = ($feature['icon'] ?? '✅') === '❌'; @endphp
             <li class="flex items-start gap-3 text-sm">
                 <span class="flex-shrink-0">{{ $feature['icon'] ?? '✅' }}</span>
-                <span class="text-slate-700 dark:text-slate-300">{{ $feature['feature'] ?? '' }}</span>
+                <span class="text-slate-700 dark:text-slate-300 @if($isCross) line-through text-slate-400 dark:text-slate-500 @endif">{{ $feature['feature'] ?? '' }}</span>
             </li>
         @endforeach
     </ul>

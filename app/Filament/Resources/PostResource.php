@@ -69,7 +69,7 @@ class PostResource extends Resource
                         ->imageEditor()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth(1920)
-                        ->maxSize(2048)
+                        ->maxSize(20000)
                         ->directory('posts/thumbnails')
                         ->columnSpanFull(),
                     Forms\Components\TextInput::make('featured_image_alt')

@@ -64,7 +64,7 @@ class ServiceResource extends Resource
                         ->imageEditor()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth(1920)
-                        ->maxSize(2048)
+                        ->maxSize(20000)
                         ->directory('services/thumbnails'),
                     Forms\Components\FileUpload::make('banner_image')
                         ->label('Banner Halaman Detail')
@@ -72,7 +72,7 @@ class ServiceResource extends Resource
                         ->imageEditor()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth(1920)
-                        ->maxSize(2048)
+                        ->maxSize(20000)
                         ->directory('services/banners'),
                 ])->columns(2),
 

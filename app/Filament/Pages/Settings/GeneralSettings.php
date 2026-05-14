@@ -35,7 +35,7 @@ class GeneralSettings extends Page
                         Forms\Components\Textarea::make('site_description')->label('Deskripsi Singkat')->rows(3)->columnSpanFull(),
                         Forms\Components\FileUpload::make('logo')->label('Logo')->image()->imageResizeMode('cover')->imageResizeTargetWidth(400)->maxSize(1024)->directory('settings'),
                         Forms\Components\FileUpload::make('favicon')->label('Favicon')->image()->imageResizeMode('cover')->imageResizeTargetWidth(256)->maxSize(512)->directory('settings'),
-                        Forms\Components\FileUpload::make('og_image')->label('OG Image (Social Share)')->image()->imageResizeMode('cover')->imageResizeTargetWidth(1200)->maxSize(2048)->directory('settings')->columnSpanFull(),
+                        Forms\Components\FileUpload::make('og_image')->label('OG Image (Social Share)')->image()->imageResizeMode('cover')->imageResizeTargetWidth(1200)->maxSize(20000)->directory('settings')->columnSpanFull(),
                     ])->columns(2),
 
                 Forms\Components\Section::make('Kontak')
@@ -67,7 +67,7 @@ class GeneralSettings extends Page
                         Forms\Components\Textarea::make('hero_description')->label('Deskripsi Hero')->rows(3)->columnSpanFull(),
                         Forms\Components\TextInput::make('hero_cta_text')->label('Teks Tombol CTA'),
                         Forms\Components\TextInput::make('hero_cta_link')->label('Link Tombol CTA'),
-                        Forms\Components\FileUpload::make('hero_image')->label('Gambar Hero')->image()->imageResizeMode('cover')->imageResizeTargetWidth(1920)->maxSize(2048)->directory('settings')->columnSpanFull(),
+                        Forms\Components\FileUpload::make('hero_image')->label('Gambar Hero')->image()->imageResizeMode('cover')->imageResizeTargetWidth(1920)->maxSize(20000)->directory('settings')->columnSpanFull(),
                     ]),
 
                 Forms\Components\Section::make('Pengaturan Lainnya')
