@@ -12,6 +12,10 @@
         <meta name="google-site-verification" content="{{ $settings->google_search_console }}" />
     @endif
 
+    @if($settings->google_adsense_id)
+        <meta name="google-adsense-account" content="ca-{{ $settings->google_adsense_id }}" />
+    @endif
+
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
     {!! \Artesaos\SEOTools\Facades\TwitterCard::generate() !!}
