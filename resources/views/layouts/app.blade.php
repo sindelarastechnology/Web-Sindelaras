@@ -58,6 +58,11 @@
         <script>gtag('js',new Date());gtag('config','{{ $settings->google_analytics_id }}');</script>
     @endif
 
+    @if($settings->google_adsense_id)
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-{{ $settings->google_adsense_id }}"
+                crossorigin="anonymous"></script>
+    @endif
+
     <script type="application/ld+json">
     {
         "@@context": "https://schema.org",
@@ -126,7 +131,6 @@
                     'ad_personalization': 'granted',
                     'analytics_storage': 'granted'
                 });
-                loadAdSense();
                 this.show = false;
             },
             reject() {
@@ -165,22 +169,6 @@
         </div>
     </div>
 
-    @if($settings->google_adsense_id)
-    <script>
-    function loadAdSense() {
-        if (document.querySelector('script[src*="pagead2.googlesyndication.com"]')) return;
-        var consent = localStorage.getItem('cookie_consent');
-        if (consent !== 'accepted') return;
-        var s = document.createElement('script');
-        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-{{ $settings->google_adsense_id }}';
-        s.async = true;
-        s.crossOrigin = 'anonymous';
-        s.setAttribute('data-ad-client', 'ca-{{ $settings->google_adsense_id }}');
-        document.head.appendChild(s);
-        window.adsbygoogle = window.adsbygoogle || [];
-    }
-    loadAdSense();
-    </script>
-    @endif
+
 </body>
 </html>

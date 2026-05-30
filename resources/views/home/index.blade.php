@@ -149,8 +149,8 @@
         </section>
     @endif
 
-    {{-- AdSense Banner -- ganti slot dengan ID unit iklan dari dashboard AdSense --}}
-    <x-ad-banner slot="" format="auto" />
+    {{-- AdSense Banner Iklan1 --}}
+    <x-ad-banner slot="5939303526" format="auto" />
 
     {{-- 4. Kenapa Memilih Kami --}}
     <section class="section-padding bg-white dark:bg-dark-base">
