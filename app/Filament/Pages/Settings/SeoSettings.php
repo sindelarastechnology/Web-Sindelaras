@@ -43,6 +43,9 @@ class SeoSettings extends Page
                     ->schema([
                         Forms\Components\TextInput::make('google_analytics_id')
                             ->label('Google Analytics ID')->placeholder('G-XXXXXXXXXX'),
+                        Forms\Components\TextInput::make('google_adsense_id')
+                            ->label('Google AdSense Publisher ID')->placeholder('pub-9912072045590404')
+                            ->helperText('Masukkan ID Penayang AdSense (ca-pub-XXX)'),
                         Forms\Components\TextInput::make('google_search_console')
                             ->label('Google Search Console Meta Tag'),
                     ])->columns(2),

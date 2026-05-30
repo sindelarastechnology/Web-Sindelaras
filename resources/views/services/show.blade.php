@@ -56,6 +56,9 @@
                     {!! $service->description !!}
                 </div>
 
+                {{-- AdSense Banner -- ganti slot dengan ID unit iklan dari dashboard AdSense --}}
+                <x-ad-banner slot="" format="auto" />
+
                 @if($service->process_steps)
                     <div class="mt-12">
                         <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white mb-6">📋 Proses Pengerjaan</h3>

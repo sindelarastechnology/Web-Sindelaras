@@ -37,9 +37,15 @@
                 <div class="mt-10">
                     {!! $posts->links() !!}
                 </div>
+
+                {{-- AdSense Banner -- ganti slot dengan ID unit iklan dari dashboard AdSense --}}
+                <x-ad-banner slot="" format="auto" />
             </div>
 
             <div class="space-y-6" data-aos="fade-up" data-aos-delay="150">
+                {{-- AdSense Banner Sidebar -- ganti slot dengan ID unit iklan dari dashboard AdSense --}}
+                <x-ad-banner slot="" format="auto" />
+
                 @if($categories->count() > 0)
                     <div class="card p-6">
                         <h4 class="font-display font-bold text-slate-900 dark:text-white mb-4">📂 Kategori</h4>

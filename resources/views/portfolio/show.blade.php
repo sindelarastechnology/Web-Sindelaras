@@ -73,6 +73,9 @@
                 <div class="prose-custom">
                     {!! $portfolio->description !!}
                 </div>
+
+                {{-- AdSense Banner -- ganti slot dengan ID unit iklan dari dashboard AdSense --}}
+                <x-ad-banner slot="" format="auto" />
             </div>
 
             <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">

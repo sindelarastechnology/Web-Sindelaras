@@ -11,7 +11,7 @@ class Setting extends Model
         'whatsapp', 'email', 'phone', 'address', 'city', 'country', 'google_maps_embed',
         'instagram', 'facebook', 'youtube', 'tiktok', 'linkedin', 'twitter', 'website_url',
         'meta_title', 'meta_description', 'meta_keywords', 'google_analytics_id',
-        'google_search_console', 'custom_head_scripts', 'custom_footer_scripts',
+        'google_adsense_id', 'google_search_console', 'custom_head_scripts', 'custom_footer_scripts',
         'default_theme', 'primary_color', 'accent_color', 'maintenance_mode',
         'maintenance_message', 'email_notification_enabled', 'cache_ttl',
         'hero_title', 'hero_subtitle', 'hero_description', 'hero_cta_text',

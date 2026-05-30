@@ -9,6 +9,7 @@
     @foreach([
         ['url' => route('about'), 'freq' => 'monthly', 'priority' => '0.8'],
         ['url' => route('contact'), 'freq' => 'monthly', 'priority' => '0.8'],
+        ['url' => route('privacy'), 'freq' => 'monthly', 'priority' => '0.5'],
         ['url' => route('services.index'), 'freq' => 'weekly', 'priority' => '0.9'],
         ['url' => route('portfolio.index'), 'freq' => 'weekly', 'priority' => '0.9'],
         ['url' => route('blog.index'), 'freq' => 'daily', 'priority' => '0.8'],

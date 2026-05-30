@@ -52,9 +52,15 @@
                 @endif
 
                 <x-social-share url="{{ url()->current() }}" title="{{ $post->title }}" />
+
+                {{-- AdSense Banner -- ganti slot dengan ID unit iklan dari dashboard AdSense --}}
+                <x-ad-banner slot="" format="auto" />
             </article>
 
             <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+                {{-- AdSense Banner Sidebar -- ganti slot dengan ID unit iklan dari dashboard AdSense --}}
+                <x-ad-banner slot="" format="auto" />
+
                 @if($relatedPosts->count() > 0)
                     <div class="card p-6">
                         <h4 class="font-display font-bold text-slate-900 dark:text-white mb-4">📖 Artikel Terkait</h4>

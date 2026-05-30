@@ -203,6 +203,19 @@
     .filter-btn.active {
         @apply bg-primary-600 border-primary-600 text-white;
     }
+
+    .ad-container {
+        clear: both;
+    }
+    .ad-slot ins.adsbygoogle {
+        display: block !important;
+        min-height: 90px;
+    }
+    @media (min-width: 768px) {
+        .ad-slot ins.adsbygoogle {
+            min-height: 120px;
+        }
+    }
 }
 
 @keyframes float {
